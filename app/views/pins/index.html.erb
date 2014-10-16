@@ -1,12 +1,10 @@
-<% if user_signed_in? %>
-  <p>
-    <%= link_to new_pin_path do %>
-      <span class="glyphicon glyphicon-plus"></span> New Pin
-    <% end %>
-  </p>
-<% else %>
-  <%= link_to "Log in", new_user_session_path, class:"btn btn-info btn-lg" %>
-<% end %>
+<%= render 'pages/home' unless user_signed_in? %>
+
+<p>
+  <%= link_to new_pin_path do %>
+    <span class="glyphicon glyphicon-plus"></span> New Pin
+  <% end %>
+</p>
 
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
