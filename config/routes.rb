@@ -2,8 +2,8 @@ Indiio::Application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pins#index"
-  #root "pages#home"
+  #root "pins#index"
+  root "pages#home"
   get "about" => "pages#about" # creates about_path
   get "notify" => "pages#notify"
   
