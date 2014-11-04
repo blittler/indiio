@@ -6,10 +6,31 @@ $navbar-height: 				45px;
 $navbar-default-bg: 			white;
 $navbar-default-brand-color: 	#2980b9;
 $brand-primary: 				#2980b9; // button color - belize hole
-$jumbotron-bg: 					white;
+$jumbotron-bg: 					#ecf0f1;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+body {
+	background: url('book.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container-med-right {
+	max-width: 500px;
+	float: right;
+}
+
+.container-full {
+  overflow: hidden;
+  margin: 0;
+  background: #ecf0f1;
+  padding: 25px;
+  border-radius: 10px;
+}
 
 .center {
      text-align: center;

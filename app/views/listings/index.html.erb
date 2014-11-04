@@ -1,0 +1,34 @@
+<div class="container-full">
+  <h3>Provider Listings</h3>
+  <div class="panel panel-default">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Created By</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @listings.each do |listing| %>
+          <tr>
+            <td><%= link_to listing.description, listing %></td>
+            <td><%= listing.user.name if listing.user %></td>
+            <td>
+            <% if listing.user == current_user %>
+              <%= link_to 'Edit', edit_listing_path(listing) %> 
+              <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+    <br>
+    <% if user_signed_in? %>
+      <%= link_to 'New Listing', new_listing_path %>
+    <% end %>
+</div>    

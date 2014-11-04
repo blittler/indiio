@@ -1,16 +1,14 @@
-<div class="jumbotron center">
+<div class="jumbotron container-med-right">
 	<h1><b>indi</b>.io</h1>
-	<h2>Where indies get published.</h2>
+	<h3>Where indies get published.</h3>
 	<p>Coming soon.</p>
 	<% if user_signed_in? %>
           Welcome back!
     <% else %>
 	<p>
 		
-		<!-- hide for now
 		<%= link_to "Log in", new_user_session_path, class:"btn btn-info btn-lg" %>
 		<%= link_to "Sign up", new_user_registration_path, class:"btn btn-primary btn-lg" %>
-		-->
 
 		<%= link_to "Notify me", notify_path, class:"btn btn-primary btn-lg" %>
 	</p>
