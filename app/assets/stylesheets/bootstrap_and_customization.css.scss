@@ -12,7 +12,7 @@ $jumbotron-bg: 					#ecf0f1;
 @import 'bootstrap';
 
 body {
-	background: url('book.jpg') no-repeat center center fixed; 
+	background: asset_url('book.jpg') no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
