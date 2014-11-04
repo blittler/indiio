@@ -22,6 +22,10 @@ https://github.com/thoughtbot/paperclip
 
 `rake db:migrate`
 
+### production.rb
+
+config.action_mailer.default_url_options = { host: 'HOSTNAME' }
+
 ### Heroku
 
 `heroku keys:add`

@@ -1,16 +1,13 @@
-<div class="jumbotron container-med-right">
+<div class="jumbotron container-med right">
 	<h1><b>indi</b>.io</h1>
-	<h3>The marketplace for independent authors</h3>
-	<p>Coming soon.</p>
+	<h3>The marketplace for independent authors.</h3>
 	<% if user_signed_in? %>
-          Welcome back!
-    <% else %>
-	<p>
-		
-		<%= link_to "Log in", new_user_session_path, class:"btn btn-info btn-lg" %>
-		<%= link_to "Sign up", new_user_registration_path, class:"btn btn-primary btn-lg" %>
-
-		<%= link_to "Notify me", notify_path, class:"btn btn-primary btn-lg" %>
-	</p>
+    <%= link_to "I'm an author", listings_path %> | 
+    <%= link_to "I'm a provider", add_listing_path %>
+  <% else %>
+		<p>Coming soon.</p>
+		<p>
+			<%= link_to "Notify me", notify_path, class:"btn btn-primary btn-lg" %>
+		</p>
 	<% end %>
 </div>

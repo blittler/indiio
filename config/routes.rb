@@ -6,6 +6,8 @@ Indiio::Application.routes.draw do
   root "pages#home"
   get "about" => "pages#about" # creates about_path
   get "notify" => "pages#notify"
+  get "listings" => "listings#index"
+  get "add_listing" => "listings#new"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

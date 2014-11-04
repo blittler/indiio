@@ -1,9 +1,8 @@
 <div class="container-full">
 	<p id="notice"><%= notice %></p>
 	<p>
-	  <div class="alignLeft"><%= image_tag @listing.image.url(:medium) %></div>
-	  <strong>Description:</strong>
-	  <%= @listing.description %>
+	  <div class="left"><%= image_tag @listing.image.url(:medium) %></div>
+	  <strong><%= @listing.description %></strong>
 	</p>
 	<% if @listing.user == current_user %>
 		<%= link_to 'Edit', edit_listing_path(@listing) %> |

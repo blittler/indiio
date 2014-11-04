@@ -19,17 +19,24 @@ body {
 	background-size: cover;
 }
 
-.alignLeft {
+.left {
 	float: left;
-	padding: 0 10px 0 0 ;
+	padding: 0 10px 0 0;
 }
 
-.container-med-right {
-	max-width: 500px;
+.right {
 	float: right;
+	padding: 0 0 0 10px;
+}
+
+.container-med {
+	max-width: 600px;
+	margin: 0;
+	padding: 0 20px 30px 20px;
 }
 
 .container-full {
+  min-width: 420px;
   overflow: hidden;
   margin: 0;
   background: #ecf0f1;
