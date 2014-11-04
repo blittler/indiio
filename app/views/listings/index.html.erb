@@ -4,7 +4,8 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Description</th>
+          <th>Image</th>
+          <th>Provider</th>
           <th>Created By</th>
           <th>Actions</th>
         </tr>
@@ -13,6 +14,7 @@
       <tbody>
         <% @listings.each do |listing| %>
           <tr>
+            <td><%= image_tag listing.image.url(:thumb) %></td>
             <td><%= link_to listing.description, listing %></td>
             <td><%= listing.user.name if listing.user %></td>
             <td>

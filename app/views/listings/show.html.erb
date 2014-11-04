@@ -1,6 +1,7 @@
 <div class="container-full">
 	<p id="notice"><%= notice %></p>
 	<p>
+	  <div class="alignLeft"><%= image_tag @listing.image.url(:medium) %></div>
 	  <strong>Description:</strong>
 	  <%= @listing.description %>
 	</p>
