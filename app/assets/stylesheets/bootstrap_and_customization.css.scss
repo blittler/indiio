@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg: 						#ecf0f1;
-$font-family-sans-serif: 		'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height: 				45px;
-$navbar-default-bg: 			white;
-$navbar-default-brand-color: 	#2980b9;
-$brand-primary: 				#2980b9; // button color - belize hole
-$jumbotron-bg: 					#ecf0f1;
+$body-bg: 									 #ecf0f1;
+$font-family-sans-serif: 		 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 						 45px;
+$navbar-default-bg: 				 white;
+$navbar-default-brand-color: #2980b9;
+$brand-primary: 						 #2980b9; // button color - belize hole
+$jumbotron-bg: 						   #ecf0f1;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -36,10 +36,10 @@ body {
 }
 
 .container-full {
-  min-width: 420px;
+  min-width: 400px;
   overflow: hidden;
   margin: 0;
-  background: #ecf0f1;
+  background: white;
   padding: 25px;
   border-radius: 10px;
 }

@@ -1,11 +1,17 @@
 <div class="container-full">
 	<p id="notice"><%= notice %></p>
 	<p>
-	  <div class="left"><%= image_tag @listing.image.url(:medium) %></div>
-	  <strong><%= @listing.description %></strong>
+		<%= link_to listings_path do %>
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		Back
+		<%end %>
 	</p>
+	  <div class="left"><%= image_tag @listing.image.url(:medium) %></div>
+	  <div class="left"><strong><%= @listing.description %></strong></div>
 	<% if @listing.user == current_user %>
-		<%= link_to 'Edit', edit_listing_path(@listing) %> |
+		<%= link_to edit_listing_path(@listing) do %> 
+			<span class="glyphicon glyphicon-edit"></span>
+			Edit
+		<% end %>
 	<% end %>
-	<%= link_to 'Back', listings_path %>
 </div>

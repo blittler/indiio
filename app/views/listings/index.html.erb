@@ -1,48 +1,36 @@
 <div class="container-full">
   <h3>Provider Listings</h3>
-  <div class="panel panel-default">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Provider</th>
-          <th>Created By</th>
-          <th>Last Updated</th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @listings.each do |listing| %>
-          <tr>
-            <td><%= link_to (image_tag listing.image.url(:thumb)), listing %></td>
-            <td><%= link_to listing.description, listing %></td>
-            <td><%= listing.user.name if listing.user %></td>
-            <td><%= listing.updated_at %></td>
-            <td>
-            <% if listing.user == current_user %>              
-              <%= link_to edit_listing_path(listing) do %> 
-                <span class="glyphicon glyphicon-edit"></span>
+      <% @listings.each do |listing| %>
+        <div class="panel panel-default" style="margin-bottom: 7px;">
+          <div class="panel-heading">
+            <%= link_to listing.description, listing %>
+            <div class="right">
+              <% if listing.user == current_user %>              
+                <%= link_to edit_listing_path(listing) do %> 
+                  <span class="glyphicon glyphicon-edit"></span>
+                <% end %>
+                <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <span class="glyphicon glyphicon-trash"></span>
+                <% end %>
               <% end %>
-              <%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <span class="glyphicon glyphicon-trash"></span>
-              <% end %>
-            <% end %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <%= link_to (image_tag listing.image.url(:thumb)), listing %>
+            Created by <%= listing.user.name if listing.user %>
+            <%= listing.updated_at %>
+            <br />
+          </div>
+        </div>
+      <% end %>
 
-    <p>
       <% if user_signed_in? %>
         <%= link_to new_listing_path do %>
           <span class="glyphicon glyphicon-plus"></span> 
           Add Listing
         <% end %>
       <% end %>
-    </p>
+
     <div class="center">
       <%= will_paginate @listings, renderer: BootstrapPagination::Rails %>
     </div>
